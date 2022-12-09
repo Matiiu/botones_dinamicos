@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #caja {
+        background: #333;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+
+    
+
+    <header>
+        <h1>Hola Mundo</h1>
+    </header>
+
+    <div id="container">
+        <button id="fadeIn">Efector Fade In</button>
+        <button id="fadeOut">Efecto Fade Out</button>
+        <button id="fadeTog">Efecto Fade Toggle</button>     
+        <hr>
+        <button id="sladeDown">Efector Fade slade Down</button>
+        <button id="SaladeOut">Efecto Fade Salade Out</button>
+        <button id="SaladeTog">Efecto Slade Toggle</button>     
+        <hr>
+    </div>
+
+    <div id="caja">
+        <h1>Holi</h1>
+    </div>
+
+
+    <script src="jquery-3.6.1.min.js" type="text/javascript"></script> 
+
+    <script>
+   
+        $(() => {
+            $('#fadeOut').click(() => {
+                $('#caja').fadeOut(1000, () => {
+                    $('#fadeOut').text("Fin del efecto");
+                })
+            });        
+        });
+
+        $(() => {
+            $('#fadeIn').click(() => {
+                $('#caja').fadeIn(1000, () => {
+                    $('#fadeOut').text("Efecto Fade Out");
+                })
+            });        
+        });
+
+        $(() => {
+            $('#fadeTog').click(() => {
+                $('#caja').fadeToggle(1000);
+            });        
+        });
+
+        $(() => {
+            $('#sladeDown').click(() => {
+                $('#caja').slideDown(1000);
+            });        
+        });
+
+        $(() => {
+            $('#SaladeOut').click(() => {
+                $('#caja').slideUp(1000);
+            });        
+        });
+
+        $(() => {
+            $('#SaladeTog').click(() => {
+                $('#caja').slideToggle(1000);
+            });        
+        });
+    </script>    
+</body>
+</html>
